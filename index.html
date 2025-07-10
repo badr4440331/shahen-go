@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shahen Go - تسجيل الدخول</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay">
+    <h1>Shahen Go</h1>
+    <p class="welcome">أهلاً وسهلاً بك في شاهين Go</p>
+
+    <div class="login-box">
+      <input type="tel" placeholder="أدخل رقم هاتفك" required />
+      <button>تسجيل الدخول</button>
+    </div>
+  </div>
+
+  <script>
+    const loginButton = document.querySelector('button');
+    const phoneInput = document.querySelector('input[type="tel"]');
+
+    loginButton.addEventListener('click', () => {
+      const phone = phoneInput.value.trim();
+
+      if (phone === '') {
+        alert('يرجى إدخال رقم الهاتف أولاً');
+        return;
+      }
+
+      // توجيه المستخدم لصفحة اختيار نوع الحساب
+      window.location.href = 'select-user.html';
+    });
+  </script>
+</body>
+</html>
